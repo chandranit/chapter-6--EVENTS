@@ -9,10 +9,21 @@ function getTarget(e){
 //Method for removing the elements of the list
 function itemDone(e){
      var target, targetParent, targetGrandParent;
-     target = e.getTarget(e);
+     target = getTarget(e);
      targetParent = target.parentNode;
-     targetGrandParent = target.parentNode.parentNode;
+     targetGrandParent = targetParent.parentNode;
      targetGrandParent.removeChild(targetParent);
+
+     // if ( target.nodeName.toLowerCase() == "a" ) {  // If user clicked on an a element
+     //    elListItem = target.parentNode;              // Get its li element
+     //    elList = elListItem.parentNode;              // Get the ul element
+     //    elList.removeChild(elListItem);              // Remove list item from list
+     //  }
+     //  if ( target.nodeName.toLowerCase() == "em" ) { // If the user clicked on an em element
+     //    elListItem = target.parentNode.parentNode;   // Get its li element
+     //    elList = elListItem.parentNode;              // Get the ul element
+     //    elList.removeChild(elListItem);              // Remove list item from list
+     //  }
 
 // Method for preventing the link from taking anywhere
      if(e.preventDefault){
