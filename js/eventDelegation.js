@@ -26,7 +26,7 @@ function itemDone(e){
      //  }
 
 // Method for preventing the link from taking anywhere
-     if(e.preventDefault){
+     if(e.preventDefault){   
           e.preventDefault();
      }
      else {
